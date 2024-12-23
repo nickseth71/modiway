@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col px-4 py-3">
+  <div class="flex flex-col px-3 py-3">
     <!-- Header Section -->
-    <div class="flex justify-between items-center py-3 px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center lg:py-3 sm:px-6 lg:px-8">
       <!-- Left Side (Menu Button) -->
-      <div class="flex items-center gap-4 sm:hidden">
+      <div class="flex items-start gap-4 sm:hidden">
         <!-- Menu Icon for Mobile Screens -->
         <button
           @click="isMenuOpen = !isMenuOpen"
@@ -27,7 +27,7 @@
       </div>
 
       <!-- Logo Section - Centered -->
-      <div class="flex justify-center items-center flex-grow">
+      <div class="lg:ml-10 flex justify-center items-center flex-grow">
         <img
           :src="Logo"
           alt="ModiwayLogo"
@@ -96,8 +96,8 @@
     <!-- Navigation Links -->
     <nav>
   <ul
-    :class="[isMenuOpen ? 'block' : 'hidden', 'sm:flex sm:flex-col md:flex-row justify-center text-sm md:text-base space-y-2 md:space-y-0 md:space-x-6']"
-    class="space-y-2 md:space-y-0"
+    :class="[isMenuOpen ? 'block' : 'hidden', 'sm:flex sm:flex-col md:flex-row justify-center text-sm md:text-base space-y-4 md:space-y-0 md:space-x-8']"
+    class="space-y-4 md:space-y-0 md:space-x-14"
   >
     <li>
       <router-link
@@ -133,6 +133,7 @@
     </li>
   </ul>
 </nav>
+
 
   </div>
 </template>

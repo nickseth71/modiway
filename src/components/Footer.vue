@@ -1,7 +1,7 @@
 <template>
-  <footer class="px-4 bg-gray-100 py-12 ">
+  <footer class="py-4">
     <!-- Top Features Section -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center ">
+    <div class="max-w-full lg:px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center bg-gray-100 py-4 lg:py-12">
       <div class="space-y-2">
         <h4 class="text-lg font-semibold text-gray-800">Free Delivery</h4>
         <p class="text-gray-600">On orders of Rs. 2999 or more</p>
@@ -17,7 +17,7 @@
     </div>
 
     <!-- Navigation Links Section -->
-    <div class="max-w-7xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div class="max-w-7xl lg:mx-48 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
       <!-- Advisor Information -->
       <div>
         <h4 class="text-lg font-semibold text-gray-800 mb-4">Advisor Information</h4>
@@ -64,7 +64,7 @@
     </div>
 
     <!-- Footer Bottom Section -->
-    <div class="border-t border-gray-300 mt-12 pt-6">
+    <div class="border-t border-gray-500 mt-12 pt-6">
       <div class="text-center text-sm text-gray-600">
         <span class="text-gray-800">© 2024 All rights reserved. Modiway Ltd.</span>
       </div>

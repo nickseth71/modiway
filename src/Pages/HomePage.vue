@@ -42,7 +42,7 @@
             <i class="fas fa-play text-2xl"></i>
           </button>
         </div>
-        
+
         <div
           v-if="mediaItems[currentIndex].type === 'video' && isPlaying"
           class="absolute inset-0 flex items-center justify-center"
@@ -109,7 +109,9 @@
         </button>
 
         <!-- Carousel Indicator (Dots) -->
-        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div
+          class="absolute hidden bottom-4 left-1/2 transform -translate-x-1/2 lg:flex space-x-2"
+        >
           <span
             v-for="(media, index) in mediaItems"
             :key="index"
@@ -117,7 +119,7 @@
             class="w-3 h-3 bg-white rounded-full cursor-pointer"
             :class="{
               'bg-opacity-50': currentIndex !== index,
-              'bg-opacity-100': currentIndex === index
+              'bg-opacity-100': currentIndex === index,
             }"
           ></span>
         </div>
@@ -125,11 +127,13 @@
     </section>
 
     <!-- Welcome Section -->
-    <section class="lg:px-20 px-2 lg:py-8 py-5">
-      <div class="text-center max-w-[820px] mx-auto leading-[38px] text-[18px] lg:text-[30px] text-[#000000D9]">
-        Welcome to a movement called the MODIWAY — a transformative journey
-        to spread joy, make lives simpler, inspire positive change for body,
-        mind, and soul, and build a better world.
+    <section class="lg:px-20 px-[35px] lg:py-8 py-5">
+      <div
+        class="text-center max-w-[820px]  mx-auto sm:leading-[20px] lg:leading-[38px] text-[16px] lg:text-[30px] text-[#000000D9]"
+      >
+        Welcome to a movement called the MODIWAY — a transformative journey to
+        spread joy, make lives simpler, inspire positive change for body, mind,
+        and soul, and build a better world.
       </div>
     </section>
 
@@ -139,8 +143,8 @@
         v-for="(image, index) in imageItems"
         :key="index"
         :class="[
-          'relative px-2 py-10',
-          index === 1 ? 'bg-gray-100' : 'bg-white',
+          'relative  py-10 bg-[#ffff]',
+          // index === 1 ? 'bg-gray-100' : 'bg-white',
         ]"
       >
         <div class="container mx-auto lg:px-12">
@@ -162,15 +166,15 @@
                 class="w-full h-full object-cover"
               />
               <h3
-                class="absolute inset-0 flex px-7 py-4 items-start justify-start text-white font-extralight text-2xl bg-black/10 rounded-md"
+                class="absolute inset-0 flex px-7 py-6 items-start justify-start text-white font-extralight text-lg lg:text-[48px] bg-black/15"
               >
                 {{ image.title }}
               </h3>
             </div>
             <!-- Description -->
-            <div class="flex-1">
-              <div class="px-2 lg:px-20 lg:py-28">
-                <h3 class="text-xl lg:text-2xl mb-2">{{ image.heading }}</h3>
+            <div class="flex-1 justify-center items-start">
+              <div class="px-[35.5px] lg:px-48 lg:py-28">
+                <h3 class="text-[26px] lg:text-2xl mb-2">{{ image.heading }}</h3>
                 <p class="text-[14px] lg:text-[20px] text-gray-700 mb-8">
                   {{ image.description }}
                 </p>
@@ -188,8 +192,10 @@
     </div>
 
     <!-- Second Section -->
-    <section class="lg:px-20 px-2 lg:py-8 py-5 bg-gray-100">
-      <div class="text-center max-w-[820px] mx-auto leading-[38px] text-[18px] lg:text-[30px] text-[#000000D9]">
+    <section class="lg:px-20 px-[35px] lg:py-8 py-5 bg-gray-100">
+      <div
+        class="text-center max-w-[820px]  mx-auto sm:leading-[20px] lg:leading-[38px] text-[16px] lg:text-[30px] text-[#000000D9]"
+      >
         Modiway is a future-forward direct-selling company. It offers the
         world’s best-designed, science-backed solutions and business
         opportunities to enhance your potential and make your dreams come true.
@@ -198,36 +204,55 @@
 
     <!-- Business Opportunity Section -->
     <section>
-  <div class="relative flex items-center justify-center lg:h-full sm:h-48">
-    <img
-      :src="businessOpportunity"
-      alt="Business Opportunity"
-      class="w-full h-full object-cover"
-    />
-    <div class="absolute inset-0 flex flex-col items-start justify-center bg-black/30 rounded-md p-4">
-      <h3 class="text-xl sm:text-3xl md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 text-left mb-4">
-        Business Opportunity
-      </h3>
-      <router-link
-        to="#"
-        class="underline text-white hover:text-blue-500 text-left text-sm sm:text-base ml-4 sm:ml-6 md:ml-12"
-      >
-        Learn More &gt;
-      </router-link>
-    </div>
-  </div>
-</section>
-
-
+      <div class="relative flex items-center justify-center lg:h-full sm:h-48">
+        <img
+          :src="businessOpportunity"
+          alt="Business Opportunity"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 flex flex-col items-start justify-center bg-black/30 rounded-md p-4"
+        >
+          <h3
+            class="text-xl max-w-180 sm:text-lg md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 text-left mb-2"
+          >
+            Business Opportunity
+          </h3>
+          <router-link
+            to="#"
+            class="underline underline-offset-4 text-white hover:text-blue-500 text-left text-lg sm:text-base ml-4 sm:ml-6 md:ml-12"
+          >
+            Learn More &gt;
+          </router-link>
+        </div>
+      </div>
+    </section>
 
     <!-- Articles and Resources Section -->
     <section class="lg:mx-20 py-4 lg:p-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <img :src="ArticleIMG" alt="Article IMG" class="w-full object-cover" />
+          <img
+            :src="ArticleIMG"
+            alt="Article IMG"
+            class="w-full object-cover"
+          />
+          <router-link
+            class="flex justify-center items-start lg:items-center underline underline-offset-4 lg:text-[20px] mt-3 pb-1"
+          >
+            Read our articles >
+          </router-link>
         </div>
         <div>
-          <img :src="ResourceIMG" alt="Resource IMG" class="w-full object-cover" />
+          <img
+            :src="ResourceIMG"
+            alt="Resource IMG"
+            class="w-full object-cover"
+          />
+          <router-link
+            class="flex justify-center items-start lg:items-center underline underline-offset-4 lg:text-[20px] mt-3 pb-1"
+            >Resources ></router-link
+          >
         </div>
       </div>
     </section>
@@ -246,8 +271,7 @@ import ThinkBeauty from "@/assets/ThinkBeauti.png";
 import BusinessOpportunity from "@/assets/businessOpportunity.png";
 import ResourceIMG from "@/assets/resources.png";
 import ArticleIMG from "@/assets/Articles.png";
-import '@fortawesome/fontawesome-free/css/all.css';
-
+import "@fortawesome/fontawesome-free/css/all.css";
 
 export default {
   components: {
@@ -274,25 +298,25 @@ export default {
         src: Thinkwellness,
         alt: "Think Wellness",
         title: "Think Wellness",
-        heading: "Heading Here",
+        heading: "ShapeShift",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat massa quis lacus sollicitudin.",
+          "Backed by science, ShapeShift has been designed to balance your calorie intake, optimize nutrition, and support your transformation, every day.  ",
       },
       {
         src: ThinkKitchen,
         alt: "Think Kitchen",
         title: "Think Kitchen",
-        heading: "Heading Here",
+        heading: "SoulChef",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat massa quis lacus sollicitudin.",
+          "Soul Chef’s range of smart kitchen solutions combine design and innovation with the art of kitchen alchemy, blending form and function, beauty and utility.",
       },
       {
         src: ThinkBeauty,
         alt: "Think Beauty",
         title: "Think Beauty",
-        heading: "Heading Here",
+        heading: "Forest Nectar",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat massa quis lacus sollicitudin.",
+          "Beauty is the art of balance—caring for body, mind, and soul. When all three thrive, you don’t just look good, you feel good too.",
       },
     ]);
 
@@ -320,7 +344,6 @@ export default {
         videoElement.pause();
       }
     };
-
 
     return {
       mediaItems,
