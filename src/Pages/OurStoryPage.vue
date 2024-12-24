@@ -183,21 +183,12 @@
       </section>
     </div>
 
-    <!-- Second Section -->
-    <!-- <section class="lg:px-20 px-2 lg:py-8 py-5 bg-gray-100">
-      <div
-        class="text-center max-w-[820px] mx-auto leading-[38px] text-[18px] lg:text-[30px] text-[#000000D9]"
-      >
-        Modiway is a future-forward direct-selling company. It offers the
-        world’s best-designed, science-backed solutions and business
-        opportunities to enhance your potential and make your dreams come true.
-      </div>
-    </section> -->
+    
 
     <!-- Business Opportunity Section -->
     <section>
       <div
-        class="relative flex items-center justify-center lg:h-full sm:h-32 md:h-48"
+        class="relative flex items-center justify-center lg:h-full sm:h-48 md:h-52"
       >
         <img
           :src="businessOpportunity"
@@ -205,10 +196,10 @@
           class="w-full h-full object-cover"
         />
         <div
-          class="absolute inset-0 flex flex-col items-center sm:items-end justify-center bg-black/20 rounded-md p-4"
+          class="absolute inset-0 flex flex-col items-center sm:items-end justify-center bg-black/20 rounded-md"
         >
           <h3
-            class="text-xl sm:text-lg md:text-2xl lg:text-4xl xl:text-[48px] text-[#000000] font-extralight sm:mr-6 lg:mr-48 text-center sm:text-right"
+            class="text-xl sm:text-lg md:text-2xl lg:text-4xl xl:text-[48px] text-[#000000] font-extralight sm:mr-2 lg:mr-48 text-right sm:text-right"
           >
             Think <br />
             Community <br />
@@ -216,34 +207,13 @@
           </h3>
           <router-link
             to="#"
-            class="underline underline-offset-4 text-[#000000] hover:text-blue-500 mr-6 lg:mr-[320px] text-lg sm:text-base mt-[20px] md:mr-12 text-center sm:text-left"
+            class="underline underline-offset-4 text-[#000000]  mr-6 lg:mr-[320px] text-lg sm:text-base mt-[20px] md:mr-12 text-center sm:text-left"
           >
             Learn More &gt;
           </router-link>
         </div>
       </div>
     </section>
-
-    <!-- Articles and Resources Section -->
-    <section class="lg:mx-20 py-4 lg:p-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <img
-            :src="ArticleIMG"
-            alt="Article IMG"
-            class="w-full object-cover"
-          />
-        </div>
-        <div>
-          <img
-            :src="ResourceIMG"
-            alt="Resource IMG"
-            class="w-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <Footer />
   </section>

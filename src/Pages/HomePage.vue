@@ -14,45 +14,11 @@
             v-if="media.type === 'video'"
             :src="media.src"
             muted
-            :autoplay="isPlaying"
+            autoplay
             playsinline
             class="block w-full h-full object-cover"
-            ref="video"
-            @play="isPlaying = true"
-            @pause="isPlaying = false"
             @ended="nextSlide"
           />
-          <!-- <img
-            v-else
-            :src="media.src"
-            alt="Media item"
-            class="block w-full h-full object-cover"
-          /> -->
-        </div>
-
-        <!-- Video Control Buttons (Play/Pause) -->
-        <div
-          v-if="mediaItems[currentIndex].type === 'video' && !isPlaying"
-          class="absolute inset-0 flex items-center justify-center"
-        >
-          <button
-            @click="togglePlayPause"
-            class="w-16 h-16 flex items-center justify-center bg-white text-black rounded-full shadow-lg"
-          >
-            <i class="fas fa-play text-2xl"></i>
-          </button>
-        </div>
-
-        <div
-          v-if="mediaItems[currentIndex].type === 'video' && isPlaying"
-          class="absolute inset-0 flex items-center justify-center"
-        >
-          <button
-            @click="togglePlayPause"
-            class="w-16 h-16 flex items-center justify-center bg-white text-black rounded-full shadow-lg"
-          >
-            <i class="fas fa-pause text-2xl"></i>
-          </button>
         </div>
 
         <!-- Carousel Controls -->
@@ -127,13 +93,15 @@
     </section>
 
     <!-- Welcome Section -->
-    <section class="lg:px-20 px-[35px] lg:py-8 py-5">
+    <section
+      class="flex justify-center items-center lg:px-20 px-[35px] lg:py-8 py-5"
+    >
       <div
-        class="text-center max-w-[820px]  mx-auto sm:leading-[20px] lg:leading-[38px] text-[16px] lg:text-[30px] text-[#000000D9]"
+        class="text-center max-w-[814px] max-h-[153px] sm:leading-[20px] lg:leading-[38px] text-[16px] lg:text-[30px] text-[#000000D9]"
       >
-        Welcome to a movement called the MODIWAY — a transformative journey to
-        spread joy, make lives simpler, inspire positive change for body, mind,
-        and soul, and build a better world.
+        Welcome to a movement called the MODIWAY A transformative journey to
+        spread joy, to make lives simpler, inspire positive change for body,
+        mind and soul, and build a better world.
       </div>
     </section>
 
@@ -147,7 +115,7 @@
           // index === 1 ? 'bg-gray-100' : 'bg-white',
         ]"
       >
-        <div class="container mx-auto lg:px-12">
+        <div class="page-width">
           <div
             :class="{
               'flex flex-col items-center lg:flex-row-reverse lg:gap-6':
@@ -173,8 +141,10 @@
             </div>
             <!-- Description -->
             <div class="flex-1 justify-center items-start">
-              <div class="px-[35.5px] lg:px-48 lg:py-28">
-                <h3 class="text-[26px] lg:text-2xl mb-2">{{ image.heading }}</h3>
+              <div class="px-[35.5px] lg:py-28">
+                <h3 class="text-[26px] lg:text-2xl mb-2">
+                  {{ image.heading }}
+                </h3>
                 <p class="text-[14px] lg:text-[20px] text-gray-700 mb-8">
                   {{ image.description }}
                 </p>
@@ -193,18 +163,18 @@
 
     <!-- Second Section -->
     <section class="bg-gray-100 px-8 lg:px-20 py-8 mb-5 md:mb-0">
-  <div class="max-w-[820px] mx-auto text-center text-black/90 text-base lg:text-2xl sm:leading-5 lg:leading-9">
-    Modiway is a future-forward direct-selling company. It offers the
-    world’s best-designed, science-backed solutions and business
-    opportunities to enhance your potential and make your dreams come true.
-  </div>
-</section>
-
-
+      <div
+        class="text-center text-black/90 text-base lg:text-2xl sm:leading-5 lg:leading-9 page-width"
+      >
+        Modiway is a future-forward direct-selling company. It offers the
+        world’s best-designed, science-backed solutions and business
+        opportunities to enhance your potential and make your dreams come true.
+      </div>
+    </section>
 
     <!-- Business Opportunity Section -->
     <section>
-      <div class="relative flex items-center justify-center lg:h-full sm:h-32 ">
+      <div class="relative flex items-center justify-center lg:h-full sm:h-32">
         <img
           :src="businessOpportunity"
           alt="Business Opportunity"
@@ -216,7 +186,8 @@
           <h3
             class="text-xl max-w-180 sm:text-lg md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 lg:text-left mb-2"
           >
-            Business <br> Opportunity
+            Business <br />
+            Opportunity
           </h3>
           <router-link
             to="#"
@@ -229,41 +200,44 @@
     </section>
 
     <!-- Articles and Resources Section -->
-    <section class=" mx-[28px] lg:mx-[20px] lg:my-8 my-12">
-      <div class="flex flex-row justify-center items-center gap-[20px] lg:gap-10">
+    <section class="mx-[28px] lg:mx-[20px] lg:my-8 my-12">
+      <div
+        class="flex flex-row justify-center items-center gap-[20px] lg:gap-10 page-width"
+      >
         <div class="text-center">
-  <img
-    :src="ArticleIMG"
-    alt="Article Image"
-    class="w-[156px] h-[135px] lg:w-full lg:h-auto object-cover"
-  />
-  <router-link
-    to="/articles"
-    class="inline-block mt-3 lg:mt-4 underline underline-offset-4 text-base lg:text-lg"
-  >
-    Read our articles >
-  </router-link>
-</div>
+          <img
+            :src="ArticleIMG"
+            alt="Article Image"
+            class="w-[156px] h-[135px] lg:w-full lg:h-auto object-cover"
+          />
+          <router-link
+            to="/articles"
+            class="inline-block mt-3 lg:mt-4 underline underline-offset-4 text-base lg:text-lg"
+          >
+            Read our articles >
+          </router-link>
+        </div>
 
-  <div class="text-center">
-    <img
-      :src="ResourceIMG"
-      alt="Resource IMG"
-      class="w-[156px] h-[135px] lg:w-full lg:h-auto object-cover"
-    />
-    <router-link
-      to="/resources"
-      class="inline-block mt-3 underline underline-offset-4 text-base lg:text-lg lg:mt-4"
-    >
-      Resources >
-    </router-link>
-  </div>
-</div>
-
+        <div class="text-center">
+          <img
+            :src="ResourceIMG"
+            alt="Resource IMG"
+            class="w-[156px] h-[135px] lg:w-full lg:h-auto object-cover"
+          />
+          <router-link
+            to="/resources"
+            class="inline-block mt-3 underline underline-offset-4 text-base lg:text-lg lg:mt-4"
+          >
+            Resources >
+          </router-link>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <Footer />
+    <div class="page-width">
+      <Footer />
+    </div>
   </section>
 </template>
 
