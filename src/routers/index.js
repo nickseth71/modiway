@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from '../Pages/HomePage.vue';
+import Home from "../Pages/HomePage.vue";
 import OurStoryPage from "../Pages/OurStoryPage.vue";
-import ProductsPage from "../Pages/ProductPage.vue"
+import ProductsPage from "../Pages/ProductPage.vue";
 import BusinessOpportunityPage from "../Pages/BusinessOpportunityPage.vue";
 import WellnessTestPage from "../Pages/WellnessTestPage.vue";
 import Layout from "../layouts/MainLayout.vue";
+import ShopShift from "../Pages/ShopShift.vue";
 
 const routes = [
   {
@@ -15,6 +16,11 @@ const routes = [
         path: "",
         name: "Home",
         component: Home,
+      },
+      {
+        path:"shope-shift",
+        name:"Shope Shift",
+        component:ShopShift,
       },
       {
         path: "ourstory",

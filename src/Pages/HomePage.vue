@@ -179,7 +179,7 @@
                   {{ image.description }}
                 </p>
                 <router-link
-                  to="#"
+                  to="/shope-shift"
                   class="cursor-pointer underline hover:text-blue-500"
                 >
                   Shop Now &gt;
@@ -216,7 +216,7 @@
           <h3
             class="text-xl max-w-180 sm:text-lg md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 lg:text-left mb-2"
           >
-            Business Opportunity
+            Business <br> Opportunity
           </h3>
           <router-link
             to="#"

@@ -22,12 +22,6 @@
             @pause="isPlaying = false"
             @ended="nextSlide"
           />
-          <!-- <img
-            v-else
-            :src="media.src"
-            alt="Media item"
-            class="block w-full h-full object-cover"
-          /> -->
         </div>
 
         <!-- Video Control Buttons (Play/Pause) -->
@@ -42,7 +36,7 @@
             <i class="fas fa-play text-2xl"></i>
           </button>
         </div>
-        
+
         <div
           v-if="mediaItems[currentIndex].type === 'video' && isPlaying"
           class="absolute inset-0 flex items-center justify-center"
@@ -54,82 +48,17 @@
             <i class="fas fa-pause text-2xl"></i>
           </button>
         </div>
-
-        <!-- Carousel Controls -->
-        <!-- <button
-          type="button"
-          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          @click="prevSlide"
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white"
-          >
-            <svg
-              class="w-4 h-4 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button> -->
-
-        <!-- <button
-          type="button"
-          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          @click="nextSlide"
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white"
-          >
-            <svg
-              class="w-4 h-4 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button> -->
-
-        <!-- Carousel Indicator (Dots) -->
-        <!-- <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          <span
-            v-for="(media, index) in mediaItems"
-            :key="index"
-            @click="currentIndex = index"
-            class="w-3 h-3 bg-white rounded-full cursor-pointer"
-            :class="{
-              'bg-opacity-50': currentIndex !== index,
-              'bg-opacity-100': currentIndex === index
-            }"
-          ></span>
-        </div> -->
       </div>
     </section>
 
     <!-- Welcome Section -->
-    <section class="lg:px-20 px-2 lg:py-8 py-5">
-      <h1 class="lg:text-[48px] text-center font-extralight">Think Life Differently</h1>
-      <div class="text-center max-w-[820px] mx-auto font-extralight leading-[30px] text-[18px] lg:text-[24px] text-[#000000]">
+    <section class="lg:px-20 px-2 lg:py-8 py-5 mb=5">
+      <h1 class="lg:text-[48px] text-center font-extralight">
+        Think Life Differently
+      </h1>
+      <!-- <div class="text-center max-w-[820px] mx-auto font-extralight leading-[30px] text-[18px] lg:text-[24px] text-[#000000]">
         All our products are designed to make that happen, backed by technology, science, research, innovation, functionality and creativity
-      </div>
+      </div> -->
       <!-- <h3 class="font-semibold text-center">-Samir K Modi</h3> -->
     </section>
 
@@ -174,7 +103,7 @@
             <i class="fas fa-play text-2xl"></i>
           </button>
         </div>
-        
+
         <div
           v-if="mediaItems[currentIndex].type === 'video' && isPlaying"
           class="absolute inset-0 flex items-center justify-center"
@@ -186,58 +115,67 @@
             <i class="fas fa-pause text-2xl"></i>
           </button>
         </div>
-
-        
       </div>
     </section>
 
-    <!-- Individual Image Sections -->
+    <section class="lg:px-[291px] px-2 lg:py-[32px] py-5">
+      <div
+        class="text-center max-w-[820px] mx-auto font-extralight leading-[30px] text-[18px] lg:text-[24px] text-[#000000]"
+      >
+        Modiway is a future-forward direct-selling company. It offers the
+        world’s best-designed, science-backed solutions and business opportunity
+        to enhance your potential and make your dreams come true.
+      </div>
+      <!-- <h3 class="font-semibold text-center">-Samir K Modi</h3> -->
+    </section>
+
+    <!-- sections -->
     <div>
       <section
         v-for="(image, index) in imageItems"
         :key="index"
-        :class="[
-          'relative px-2 py-10',
-          index === 1 ? 'bg-gray-100' : 'bg-white',
-        ]"
+        :class="['relative  py-10', index === 1 ? 'bg-gray-100' : 'bg-white']"
       >
-        <div class="container mx-auto lg:px-12">
+        <div class="container mx-auto lg:px-[160px]">
           <div
             :class="{
-              'flex flex-col items-center lg:flex-row-reverse lg:gap-6':
+              'flex flex-col items-center lg:flex-row-reverse lg:gap-8':
                 index % 2 === 0,
-              'flex flex-col items-center lg:flex-row lg:gap-6':
+              'flex flex-col items-center lg:flex-row lg:gap-8':
                 index % 2 !== 0,
             }"
+            class="mb-8"
           >
             <!-- Image with Title Overlay -->
             <div
-              class="relative w-full lg:w-[500px] h-64 lg:h-[436px] mb-4 lg:mb-0 lg:mr-4 lg:ml-8"
+              class="relative w-full lg:w-[500px] h-64 lg:h-[436px] mb-4 lg:mb-0 lg:ml-6"
             >
               <img
                 :src="image.src"
                 :alt="image.alt"
                 class="w-full h-full object-cover"
               />
-              <h3
-                class="absolute inset-0 flex px-7 py-4 items-start justify-start text-white font-extralight text-2xl bg-black/10 rounded-md"
-              >
-                {{ image.title }}
-              </h3>
+              <!-- Uncomment if you want the title overlay -->
+              <!-- <h3
+        class="absolute inset-0 flex px-7 py-4 items-start justify-start text-white font-light text-2xl bg-black/10 rounded-md"
+      >
+        {{ image.title }}
+      </h3> -->
             </div>
+
             <!-- Description -->
-            <div class="flex-1">
-              <div class="px-2 lg:px-20 lg:py-28">
-                <h3 class="text-xl lg:text-2xl mb-2">{{ image.heading }}</h3>
-                <p class="text-[14px] lg:text-[20px] text-gray-700 mb-8">
+            <div class="flex-1 justify-center items-start">
+              <div class="px-[35.5px] lg:px-48 lg:py-28">
+                <h3
+                  class="text-[26px] lg:text-[48px] mb-2"
+                >
+                  {{ image.heading }}
+                </h3>
+                <p
+                  class="text-[14px] lg:text-[20px] text-gray-700"
+                >
                   {{ image.description }}
                 </p>
-                <router-link
-                  to="#"
-                  class="cursor-pointer underline hover:text-blue-500"
-                >
-                  Shop Now &gt;
-                </router-link>
               </div>
             </div>
           </div>
@@ -246,46 +184,62 @@
     </div>
 
     <!-- Second Section -->
-    <section class="lg:px-20 px-2 lg:py-8 py-5 bg-gray-100">
-      <div class="text-center max-w-[820px] mx-auto leading-[38px] text-[18px] lg:text-[30px] text-[#000000D9]">
+    <!-- <section class="lg:px-20 px-2 lg:py-8 py-5 bg-gray-100">
+      <div
+        class="text-center max-w-[820px] mx-auto leading-[38px] text-[18px] lg:text-[30px] text-[#000000D9]"
+      >
         Modiway is a future-forward direct-selling company. It offers the
         world’s best-designed, science-backed solutions and business
         opportunities to enhance your potential and make your dreams come true.
       </div>
-    </section>
+    </section> -->
 
     <!-- Business Opportunity Section -->
     <section>
-  <div class="relative flex items-center justify-center lg:h-full sm:h-48">
-    <img
-      :src="businessOpportunity"
-      alt="Business Opportunity"
-      class="w-full h-full object-cover"
-    />
-    <div class="absolute inset-0 flex flex-col items-start justify-center bg-black/30 rounded-md p-4">
-      <h3 class="text-xl sm:text-3xl md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 text-left mb-4">
-        Business Opportunity
-      </h3>
-      <router-link
-        to="#"
-        class="underline text-white hover:text-blue-500 text-left text-sm sm:text-base ml-4 sm:ml-6 md:ml-12"
+      <div
+        class="relative flex items-center justify-center lg:h-full sm:h-32 md:h-48"
       >
-        Learn More &gt;
-      </router-link>
-    </div>
-  </div>
-</section>
-
-
+        <img
+          :src="businessOpportunity"
+          alt="Business Opportunity"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 flex flex-col items-center sm:items-end justify-center bg-black/20 rounded-md p-4"
+        >
+          <h3
+            class="text-xl sm:text-lg md:text-2xl lg:text-4xl xl:text-[48px] text-[#000000] font-extralight sm:mr-6 lg:mr-48 text-center sm:text-right"
+          >
+            Think <br />
+            Community <br />
+            Differently
+          </h3>
+          <router-link
+            to="#"
+            class="underline underline-offset-4 text-[#000000] hover:text-blue-500 mr-6 lg:mr-[320px] text-lg sm:text-base mt-[20px] md:mr-12 text-center sm:text-left"
+          >
+            Learn More &gt;
+          </router-link>
+        </div>
+      </div>
+    </section>
 
     <!-- Articles and Resources Section -->
     <section class="lg:mx-20 py-4 lg:p-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <img :src="ArticleIMG" alt="Article IMG" class="w-full object-cover" />
+          <img
+            :src="ArticleIMG"
+            alt="Article IMG"
+            class="w-full object-cover"
+          />
         </div>
         <div>
-          <img :src="ResourceIMG" alt="Resource IMG" class="w-full object-cover" />
+          <img
+            :src="ResourceIMG"
+            alt="Resource IMG"
+            class="w-full object-cover"
+          />
         </div>
       </div>
     </section>
@@ -298,14 +252,13 @@
 <script>
 import { ref } from "vue";
 import Footer from "@/components/Footer.vue";
-import Thinkwellness from "@/assets/Thinkwellness.png";
-import ThinkKitchen from "@/assets/ThinkKitchen.png";
-import ThinkBeauty from "@/assets/ThinkBeauti.png";
-import BusinessOpportunity from "@/assets/businessOpportunity.png";
+import ThinkChange from "@/assets/ThinkChange.png";
+import ThinkSolution from "@/assets/ThinkSolution.png";
+import ThinkFuture from "@/assets/ThinkFuture.png";
+import ThinkCommunity from "@/assets/ThinkCommunity.png";
 import ResourceIMG from "@/assets/resources.png";
 import ArticleIMG from "@/assets/Articles.png";
-import '@fortawesome/fontawesome-free/css/all.css';
-
+import "@fortawesome/fontawesome-free/css/all.css";
 
 export default {
   components: {
@@ -317,10 +270,10 @@ export default {
         type: "video",
         src: "https://videos.pexels.com/video-files/2544523/2544523-hd_1920_1080_24fps.mp4",
       },
-      // {
-      //   type: "video",
-      //   src: "https://cdn.pixabay.com/video/2022/11/22/140111-774507949_large.mp4",
-      // },
+      {
+        type: "video",
+        src: "https://cdn.pixabay.com/video/2022/11/22/140111-774507949_large.mp4",
+      },
       // {
       //   type: "video",
       //   src: "https://cdn.pixabay.com/video/2024/06/25/218213_large.mp4",
@@ -329,32 +282,29 @@ export default {
 
     const imageItems = ref([
       {
-        src: Thinkwellness,
-        alt: "Think Wellness",
-        title: "Think Wellness",
-        heading: "Heading Here",
+        src: ThinkChange,
+        alt: "Think Change",
+        heading: "Think Change Diffrently",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat massa quis lacus sollicitudin.",
+          "Our vision is to be a catalyst of change and personal growth, empowering everyone to think life differently.",
       },
       {
-        src: ThinkKitchen,
-        alt: "Think Kitchen",
-        title: "Think Kitchen",
-        heading: "Heading Here",
+        src: ThinkSolution,
+        alt: "Think Solution",
+        heading: "Think Solution Differently",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat massa quis lacus sollicitudin.",
+          "Through innovation, science and creativity, we create everyday solutions for body, mind, and soul. ",
       },
       {
-        src: ThinkBeauty,
-        alt: "Think Beauty",
-        title: "Think Beauty",
-        heading: "Heading Here",
+        src: ThinkFuture,
+        alt: "Think Future",
+        heading: "Think Future Differently",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat massa quis lacus sollicitudin.",
+          "Our mission is to spread joy, build a happy and healthy community, inspire change, and create a better world.",
       },
     ]);
 
-    const businessOpportunity = BusinessOpportunity;
+    const businessOpportunity = ThinkCommunity;
 
     const currentIndex = ref(0);
     const isPlaying = ref(false);
@@ -378,7 +328,6 @@ export default {
         videoElement.pause();
       }
     };
-
 
     return {
       mediaItems,
