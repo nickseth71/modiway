@@ -192,19 +192,19 @@
     </div>
 
     <!-- Second Section -->
-    <section class="lg:px-20 px-[35px] lg:py-8 py-5 bg-gray-100">
-      <div
-        class="text-center max-w-[820px]  mx-auto sm:leading-[20px] lg:leading-[38px] text-[16px] lg:text-[30px] text-[#000000D9]"
-      >
-        Modiway is a future-forward direct-selling company. It offers the
-        world’s best-designed, science-backed solutions and business
-        opportunities to enhance your potential and make your dreams come true.
-      </div>
-    </section>
+    <section class="bg-gray-100 px-8 lg:px-20 py-8 mb-5 md:mb-0">
+  <div class="max-w-[820px] mx-auto text-center text-black/90 text-base lg:text-2xl sm:leading-5 lg:leading-9">
+    Modiway is a future-forward direct-selling company. It offers the
+    world’s best-designed, science-backed solutions and business
+    opportunities to enhance your potential and make your dreams come true.
+  </div>
+</section>
+
+
 
     <!-- Business Opportunity Section -->
     <section>
-      <div class="relative flex items-center justify-center lg:h-full sm:h-48">
+      <div class="relative flex items-center justify-center lg:h-full sm:h-32 ">
         <img
           :src="businessOpportunity"
           alt="Business Opportunity"
@@ -214,7 +214,7 @@
           class="absolute inset-0 flex flex-col items-start justify-center bg-black/30 rounded-md p-4"
         >
           <h3
-            class="text-xl max-w-180 sm:text-lg md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 text-left mb-2"
+            class="text-xl max-w-180 sm:text-lg md:text-4xl lg:text-[48px] text-white font-semibold ml-4 sm:ml-6 md:ml-12 lg:text-left mb-2"
           >
             Business Opportunity
           </h3>
@@ -229,32 +229,37 @@
     </section>
 
     <!-- Articles and Resources Section -->
-    <section class="lg:mx-20 py-4 lg:p-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <img
-            :src="ArticleIMG"
-            alt="Article IMG"
-            class="w-full object-cover"
-          />
-          <router-link
-            class="flex justify-center items-start lg:items-center underline underline-offset-4 lg:text-[20px] mt-3 pb-1"
-          >
-            Read our articles >
-          </router-link>
-        </div>
-        <div>
-          <img
-            :src="ResourceIMG"
-            alt="Resource IMG"
-            class="w-full object-cover"
-          />
-          <router-link
-            class="flex justify-center items-start lg:items-center underline underline-offset-4 lg:text-[20px] mt-3 pb-1"
-            >Resources ></router-link
-          >
-        </div>
-      </div>
+    <section class=" mx-[28px] lg:mx-[20px] lg:my-8 my-12">
+      <div class="flex flex-row justify-center items-center gap-[20px] lg:gap-10">
+        <div class="text-center">
+  <img
+    :src="ArticleIMG"
+    alt="Article Image"
+    class="w-[156px] h-[135px] lg:w-full lg:h-auto object-cover"
+  />
+  <router-link
+    to="/articles"
+    class="inline-block mt-3 lg:mt-4 underline underline-offset-4 text-base lg:text-lg"
+  >
+    Read our articles >
+  </router-link>
+</div>
+
+  <div class="text-center">
+    <img
+      :src="ResourceIMG"
+      alt="Resource IMG"
+      class="w-[156px] h-[135px] lg:w-full lg:h-auto object-cover"
+    />
+    <router-link
+      to="/resources"
+      class="inline-block mt-3 underline underline-offset-4 text-base lg:text-lg lg:mt-4"
+    >
+      Resources >
+    </router-link>
+  </div>
+</div>
+
     </section>
 
     <!-- Footer -->

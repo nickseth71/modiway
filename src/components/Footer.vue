@@ -1,20 +1,33 @@
 <template>
   <footer class="py-4">
     <!-- Top Features Section -->
-    <div class="max-w-full lg:px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center bg-gray-100 py-4 lg:py-12">
-      <div class="space-y-2">
-        <h4 class="text-lg font-semibold text-gray-800">Free Delivery</h4>
-        <p class="text-gray-600">On orders of Rs. 2999 or more</p>
-      </div>
-      <div class="space-y-2">
-        <h4 class="text-lg font-semibold text-gray-800">Shop with Confidence</h4>
-        <p class="text-gray-600">With our 2-year guarantee</p>
-      </div>
-      <div class="space-y-2">
-        <h4 class="text-lg font-semibold text-gray-800">Love-it Guarantee</h4>
-        <p class="text-gray-600">Available on all products</p>
-      </div>
-    </div>
+    <div class="max-w-full px-4 lg:px-2 flex flex-row justify-center items-center lg:flex-row text-center bg-gray-100 py-4 lg:py-12 gap-6 lg:gap-12">
+  <div class="space-y-2">
+    <h4 class="text-[16px] lg:text-[20px] leading-tight lg:leading-snug font-semibold text-black">
+      Free Delivery
+    </h4>
+    <p class="text-xs lg:text-sm text-black">
+      On orders of Rs. 2999 or more
+    </p>
+  </div>
+  <div class="space-y-2">
+    <h4 class="text-[16px] lg:text-[20px] leading-tight lg:leading-snug font-semibold text-black">
+      Shop with Confidence
+    </h4>
+    <p class="text-xs lg:text-sm text-black">
+      With our 2-year guarantee
+    </p>
+  </div>
+  <div class="space-y-2">
+    <h4 class="text-[16px] lg:text-[20px] leading-tight lg:leading-snug font-semibold text-black">
+      Love-it Guarantee
+    </h4>
+    <p class="text-xs lg:text-sm text-black">
+      Available on all products
+    </p>
+  </div>
+</div>
+
 
     <!-- Navigation Links Section -->
     <div class="max-w-7xl lg:mx-48 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
